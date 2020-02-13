@@ -10,6 +10,7 @@ import com.example.Domain.Team;
 import com.example.Repository.TeamRepository;
 
 /**
+ * teamsテーブルを操作するサービスクラスです.
  * @author rinashioda
  *
  */
@@ -22,9 +23,9 @@ public class TeamService {
 	
 
 	/**
-	 * 
+	 * 主キーを使ってリポジトリのloadメソッドを呼び出す.
 	 * @param id
-	 * @return
+	 * @return 一件検索した結果
 	 */
 	public Team showDetail(Integer id) {
 
@@ -34,8 +35,8 @@ public class TeamService {
 	}
 
 	/**
-	 * 
-	 * @return
+	 * リポジトリのfindAllメソッドを呼び出す.
+	 * @return 全件検索した結果
 	 */
 	public List<Team> showList() {
 

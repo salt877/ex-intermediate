@@ -1,5 +1,10 @@
 package com.example.Domain;
 
+/**
+ * hotelsテーブルを操作するドメインクラスです.
+ * @author rinashioda
+ *
+ */
 public class Hotel {
 
 	/** ID */

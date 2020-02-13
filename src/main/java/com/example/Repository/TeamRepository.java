@@ -11,9 +11,8 @@ import org.springframework.stereotype.Repository;
 
 import com.example.Domain.Team;
 
-
 /**
- * teamsテーブルを操作するリポジトリ.
+ * teamsテーブルを操作するリポジトリクラスです.
  * 
  * @author rinashioda
  *
@@ -38,25 +37,25 @@ public class TeamRepository {
 		return team;
 
 	};
-	
+
 	/**
 	 * 全件検索を行って発足日順で取得します.
 	 * 
 	 * @return 全チーム一覧
 	 */
 	public List<Team> findAll() {
-		
+
 		String sql = "SELECT id,league_name,team_name,headquarters,inauguration,history FROM teams ORDER BY inauguration";
-		
-		List<Team> teamList = template.query(sql,TEAM_ROW_MAPPER);
-		
+
+		List<Team> teamList = template.query(sql, TEAM_ROW_MAPPER);
+
 		return teamList;
 	}
 
 	/**
 	 * 主キー検索を行います.
 	 * 
-	 * @param id
+	 * @param id ID
 	 * @return チーム情報
 	 */
 	public Team load(Integer id) {
@@ -67,7 +66,6 @@ public class TeamRepository {
 
 		Team team = template.queryForObject(sql, param, TEAM_ROW_MAPPER);
 
-		
 		return team;
 	}
 
